@@ -12,3 +12,7 @@ body {
     color: var(--text-pink);
     margin: 0;
 }
+
+.text-stroked {
+    color: #94B49F!important;
+}

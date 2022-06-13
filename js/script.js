@@ -1,7 +1,35 @@
 'use strict'
 
+const toDoList = [
+    {
+        text: 'Aprire GitHub',
+        done: true,
+    },
+    {
+        text: 'Creare una repository',
+        done: true,
+    },
+    {
+        text: 'Clonare la repository su VSCode',
+        done: false,
+    },
+    {
+        text: 'Creare i file base con la consegna',
+        done: false,
+    },
+    {
+        text: 'Aprire Spotify, ed iniziare a scrivere codice',
+        done: true,
+    },
+];
+console.log(toDoList)
+
 new Vue({
     el: '#app',
+    data: {
+        lista: toDoList,
+        currentIndex: 0,
+    }
 })
 
 

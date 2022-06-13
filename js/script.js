@@ -29,18 +29,19 @@ new Vue({
     data: {
         lista: toDoList,
         newText: '',
+        checked: false,
     },
     methods: {
         deleteItem(listIndex){
             this.listIndex = toDoList.splice(listIndex, 1);
         },
         addItems(){            
-            if (this.newText === "") {
+            if (this.newText === " ") {
                 return;
             } else {
-                toDoList.push((this.newText).trim());
+                this.lista.push({text: this.newText.trim()});
             }
-
+            console.log(this.newText)
             this.newText = '';
         },
         keyEnter(){

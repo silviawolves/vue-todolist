@@ -32,7 +32,7 @@
                             class="list-group-item"
                             :class="                            {'text-decoration-line-through': item.done === true, 'text-stroked': item.done === true}">
                             {{item.text}}
-                            <i class="fa-solid fa-ban text-danger float-end" @click="deleteItem(i)"></i>
+                            <i class="fa-solid fa-ban float-end delete-icon" @click="deleteItem(i)"></i>
                             </li>
                         </ul>
 

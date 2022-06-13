@@ -32,7 +32,7 @@ new Vue({
     },
     methods: {
         deleteItem(listIndex){
-            this.listIndex = toDoList.splice(listIndex, 1)
+            this.listIndex = toDoList.splice(listIndex, 1);
         },
         addItems(){            
             if (this.newText === "") {
@@ -45,7 +45,7 @@ new Vue({
         },
         keyEnter(){
             this.addItems();
-        }
+        },
     }
 })
 

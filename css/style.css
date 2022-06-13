@@ -13,10 +13,6 @@ body {
     margin: 0;
 }
 
-.text-stroked {
-    color: #94B49F!important;
-}
-
 .delete-icon {
     color: #DF7861;
     cursor: pointer;

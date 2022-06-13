@@ -28,17 +28,23 @@ new Vue({
     el: '#app',
     data: {
         lista: toDoList,
-        text: '',
+        newText: '',
     },
     methods: {
         deleteItem(listIndex){
             this.listIndex = toDoList.splice(listIndex, 1)
         },
-        addItems(){
-            toDoList.push(this.text)
+        addItems(){            
+            if (this.newText === "") {
+                return;
+            } else {
+                toDoList.push((this.newText).trim());
+            }
+
+            this.newText = '';
         },
         keyEnter(){
-            this.addItems()
+            this.addItems();
         }
     }
 })
@@ -61,10 +67,10 @@ Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 MILESTONE 2 X
 Visualizzare a fianco ad ogni item una “x”: cliccando su di essa, senza chiedere all’utente conferma, il todo viene rimosso dalla lista.
 
-MILESTONE 3
+MILESTONE 3 
 Predisporre un campo di input testuale (sempre visibile) e un pulsante “aggiungi”: cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 
 Bonus:
-1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
+1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista X
 2- cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */

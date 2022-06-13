@@ -19,8 +19,9 @@ body {
 
 .delete-icon {
     color: #DF7861;
+    cursor: pointer;
 }
 
-.delete-icon:not(:hover) {
+.list-group-item:not(:hover) .delete-icon{
     opacity: 0;
 }

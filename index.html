@@ -37,7 +37,7 @@
                         </ul>
 
                         <div class="input-group mt-5 mb-2 px-5 justify-content-center">
-                            <input type="text" class="form-control" placeholder="Nuovo oggetto della lista.." v-model="newText">
+                            <input type="text" class="form-control" placeholder="Nuovo oggetto della lista.." v-model="text" @keyup.enter="keyEnter(addItems)">
                             <button class="btn btn-outline-danger" type="button" id="button-addon2" @click="addItems">Aggiungi</button>
                         </div>
 

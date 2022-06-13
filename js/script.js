@@ -28,15 +28,18 @@ new Vue({
     el: '#app',
     data: {
         lista: toDoList,
-        newText: '',
+        text: '',
     },
     methods: {
         deleteItem(listIndex){
             this.listIndex = toDoList.splice(listIndex, 1)
         },
         addItems(){
-            toDoList.push(this.newText)
+            toDoList.push(this.text)
         },
+        keyEnter(){
+            this.addItems()
+        }
     }
 })
 
